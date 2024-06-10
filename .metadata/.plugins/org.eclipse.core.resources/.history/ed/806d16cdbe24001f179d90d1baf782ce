@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="springMvc-05-mini_proj">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <property name="context-root" value="springMvc-05-mini_proj"/>
+        <property name="java-output-path" value="/springMvc-05-mini_proj/target/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,13 @@
+package com.nt.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+@Controller
+public class MsgController {
+
+	public String getGreet(Model model) {
+		model.addAttribute("msg", "Good morning...");
+		return "index";
+	}
+}

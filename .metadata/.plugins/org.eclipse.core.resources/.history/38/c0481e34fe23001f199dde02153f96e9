@@ -1,0 +1,18 @@
+package com.nt.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.nt.bindings.Book;
+
+@Controller
+public class BookController {
+
+	//method-1:to load form
+	public ModelAndView loadForm() {
+		ModelAndView mav=new ModelAndView();
+		mav.addObject("bookObj", new Book());
+		mav.setViewName("bookView");
+		return mav;
+	}
+}

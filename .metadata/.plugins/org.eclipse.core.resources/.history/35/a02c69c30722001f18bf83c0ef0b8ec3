@@ -1,0 +1,29 @@
+package com.nt.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.nt.binding.User;
+
+
+
+@Controller
+public class UserController {
+
+	@GetMapping("/")
+	public String loadForm() {
+		
+		return "index";
+	}
+	
+	@PostMapping("/save")
+	public String handleSubmission(User user,Mo
+			del model) {
+		System.out.println(user);
+		model.addAttribute("msg","user saved");
+		return "index";
+		
+	}
+}

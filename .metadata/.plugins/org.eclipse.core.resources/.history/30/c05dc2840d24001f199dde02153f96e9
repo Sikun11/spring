@@ -1,0 +1,18 @@
+package com.nt.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.nt.repo.ProductRepo;
+
+@Service
+public class ProductSreviceIml implements ProductService{
+
+	@Autowired
+	private ProductRepo repo;
+	
+	@Override
+	public boolean saveProduct(Product p) {
+		Product savedProduct=
+	}
+}

@@ -1,0 +1,42 @@
+package com.nt;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.nt.binding.Student;
+
+@Controller
+public class StudentController {
+
+	//method to load the student form
+	@GetMapping("/")
+	public String loadForm(Model model) {
+		
+		List<String> coursesList=new ArrayList<>();
+		coursesList.add("java");
+		coursesList.add("python");
+		coursesList.add("oracle");
+		coursesList.add("aws");
+		coursesList.add("springboot");
+		
+		List<String> timingsList=new ArrayList<>();
+		coursesList.add("morning");
+		coursesList.add("afternoon");
+		coursesList.add("evening");
+		
+		model.addAttribute("courses",coursesList );
+		model.addAttribute("timings", timingsList);
+		
+		Student student=new Student();
+		model.addAttribute("students", student);
+		
+		
+		return "index";
+	}
+	//method to save the students data
+	//method to display the student data
+}

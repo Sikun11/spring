@@ -1,0 +1,17 @@
+package com.nt;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class MessageController {
+
+	@GetMapping("/welcome")
+	public String welcomeMsg() {
+		return "welcome to nareshit";
+	}
+	@GetMapping("/greet")
+	public String greetMsg() {
+		return "good evening";
+	}
+}

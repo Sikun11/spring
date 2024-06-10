@@ -1,0 +1,20 @@
+package com.nt.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class UserController {
+
+	@GetMapping("/")
+	public String loadForm() {
+		
+		return "index";
+	}
+	
+	@PostMapping("/save")
+	public String handleSubmission() {
+		
+	}
+}

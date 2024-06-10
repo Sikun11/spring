@@ -1,0 +1,8 @@
+spring.application.name=springMvc-03-productApp
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:orcl
+spring.datasource.username=hyd
+spring.datasource.password=nit
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true

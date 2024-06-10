@@ -1,0 +1,16 @@
+package com.nt.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.nt.bindings.User;
+
+@Controller
+public class UserController {
+
+	public ModelAndView loadform() {
+		ModelAndView mav=new ModelAndView();
+		mav.addObject("userObj", new User());
+		mav.setViewName("index");
+	}
+}

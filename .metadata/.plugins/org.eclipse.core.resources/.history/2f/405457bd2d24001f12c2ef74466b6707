@@ -1,0 +1,23 @@
+package com.nt.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.nt.entity.ProductEntity;
+import com.nt.service.ProductService;
+
+@Controller
+public class ProductController {
+     
+	@Autowired
+	private ProductService	productService;
+	
+	//load form
+	public ModelAndView loadForm() {
+		ModelAndView mav=new ModelAndView();
+		mav.addObject("pObj", new ProductEntity());//for form binding
+		mav.setViewName("index");
+		return mav;
+	}
+}

@@ -1,0 +1,15 @@
+package com.nt.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+import com.nt.binding.User;
+
+@Controller
+public class UserController {
+
+	public String loadForm(Model model) {
+		model.addAttribute("user", new User());
+		return "index";
+	}
+}

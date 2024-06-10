@@ -1,0 +1,26 @@
+package com.nt;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+@Controller
+public class StudentController {
+
+	//method to load the student form
+	public String loadForm(Model model) {
+		
+		List<String> courses=new ArrayList<>();
+		courses.add("java");
+		courses.add("python");
+		courses.add("oracle");
+		courses.add("aws");
+		courses.add("springboot");
+		
+		return "index";
+	}
+	//method to save the students data
+	//method to display the student data
+}
